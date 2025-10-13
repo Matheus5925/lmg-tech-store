@@ -84,17 +84,20 @@ export default function LandingPage(): JSX.Element {
 
 // ----------------------------- Header -----------------------------
 function Header() {
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <header className="fixed top-0 left-0 right-0 backdrop-blur z-40">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 backdrop-blur z-40 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
           <img
-            src="/LMG_TECH_Logo_Design-removebg-preview.png" // place your uploaded logo at public/images/logo.png
+            src="/LMG_TECH_Logo_Design-removebg-preview.png"
             alt="LMG Tech"
-            className="w-36 h-auto object-contain"
+            className="w-28 sm:w-36 h-auto object-contain"
           />
         </a>
 
+        {/* Desktop menu */}
         <nav className="hidden md:flex items-center gap-8 text-sm">
           <a href="#produtos" className="hover:underline">
             Produtos
@@ -118,18 +121,46 @@ function Header() {
           </Button>
         </nav>
 
+        {/* Mobile button */}
         <div className="md:hidden">
-          {/* simple mobile CTA */}
-          <Button asChild>
-            <a href="#comprar" className="px-3 py-2 rounded-md bg-[#06b6d4] text-slate-900 font-semibold">
-              Comprar
-            </a>
-          </Button>
+          <button
+            onClick={() => setOpen(!open)}
+            className="p-2 rounded-md bg-white/10 hover:bg-white/20"
+          >
+            ☰
+          </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <nav className="md:hidden bg-[#07133a]/95 border-t border-white/10 px-6 py-4 space-y-4 text-sm">
+          <a href="#produtos" className="block hover:underline">
+            Produtos
+          </a>
+          <a href="#beneficios" className="block hover:underline">
+            Benefícios
+          </a>
+          <a href="#depoimentos" className="block hover:underline">
+            Depoimentos
+          </a>
+          <a href="#faq" className="block hover:underline">
+            FAQ
+          </a>
+          <Button asChild>
+            <a
+              href="#comprar"
+              className="block text-center px-4 py-2 rounded-md bg-gradient-to-r from-[#06b6d4] to-[#60a5fa] text-slate-900 font-semibold shadow-md"
+            >
+              Compre agora
+            </a>
+          </Button>
+        </nav>
+      )}
     </header>
   );
 }
+
 
 // ----------------------------- Hero -----------------------------
 function Hero() {
