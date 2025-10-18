@@ -17,7 +17,7 @@ import { CartItem } from "./CartItem";
 import { useNavigate } from "react-router-dom";
 
 export function CartDrawer({ drawerOpen, setDrawerOpen }) {
-  const { cart, removeFromCart, updateQuantity } = useCart();
+  const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
   const handleCheckout = () => {
     // Seu número de WhatsApp no formato internacional (ex: 55 para Brasil)
     const phoneNumber = "5511983082634"; // <-- coloque o seu número aqui (sem + ou traços)
@@ -155,6 +155,7 @@ export function CartDrawer({ drawerOpen, setDrawerOpen }) {
                 onClick={() => {
                   setDrawerOpen(false);
                   handleCheckout()
+                  clearCart()
                 }}
                 sx={{
                   mt: 3,
