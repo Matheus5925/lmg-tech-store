@@ -24,7 +24,7 @@ export function CartDrawer({ drawerOpen, setDrawerOpen }) {
 
     // Monta a mensagem com os itens do carrinho
     const message = [
-      "🛒 *Pedido via site LMG Tech Store*",
+      "🛒 *Pedido via site TECHTEEN Store*",
       "",
       ...cart.map(
         (item) =>
@@ -164,7 +164,7 @@ export function CartDrawer({ drawerOpen, setDrawerOpen }) {
                 }}
                 fullWidth
               >
-                Ir para o checkout
+                Finalizar Compra via WhatsApp
               </Button>
             </Container>
           </Paper>

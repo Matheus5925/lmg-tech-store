@@ -16,8 +16,8 @@ export default function Header() {
         {/* LOGO */}
         <a href="#" className="flex items-center gap-2 min-w-0">
           <img
-            src="/LMG_TECH_Logo_Design-removebg-preview.png"
-            alt="LMG Tech"
+            src="/assets/img/logo-tech-teen-removebg-preview.png"
+            alt="TECHTEEN"
             className="w-28 sm:w-36 h-auto object-contain max-w-full"
           />
         </a>

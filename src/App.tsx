@@ -83,10 +83,6 @@ export default function LandingPage(): JSX.Element {
           </section>
 
           <section className="mt-16">
-            <Pricing />
-          </section>
-
-          <section className="mt-16">
             <FAQ />
           </section>
 
@@ -145,12 +141,12 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-start gap-6">
         <div className="flex flex-col items-start gap-2">
           <img
-            src="/LMG_TECH_Logo_Design-removebg-preview.png"
-            alt="LMG Tech"
+            src="/assets/img/logo-tech-teen-removebg-preview.png"
+            alt="TECHTEEN"
             className="w-28 sm:w-32 md:w-40 object-contain"
           />
           <p className="text-slate-300 text-sm leading-relaxed max-w-xs sm:max-w-sm">
-            LMG Tech — soluções e acessórios eletrônicos com design e performance.
+            TECHTEEN — soluções e acessórios eletrônicos com design e performance.
             Atendimento e garantia inclusos.
           </p>
         </div>
@@ -187,7 +183,7 @@ function Footer() {
       </div>
 
       <div className="border-t border-white/6 py-6 mt-6 text-center text-slate-400 text-sm">
-        © {new Date().getFullYear()} LMG Tech. Todos os direitos reservados.
+        © {new Date().getFullYear()} TECHTEEN. Todos os direitos reservados.
       </div>
     </footer>
   );

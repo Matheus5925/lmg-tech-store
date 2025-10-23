@@ -53,7 +53,7 @@ export default function ProductShowcase({ PRODUCTS }) {
                       hover:scale-105
                       cursor: cursor-pointer"
                     >
-                      Comprar
+                      Adicionar ao carrinho
                     </p>
                   </Button>
                 </div>

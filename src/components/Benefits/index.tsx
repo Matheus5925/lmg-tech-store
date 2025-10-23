@@ -21,7 +21,7 @@ export default function Benefits() {
 
   return (
     <div id="beneficios">
-      <h2 className="text-2xl md:text-3xl font-bold">Por que escolher LMG Tech</h2>
+      <h2 className="text-2xl md:text-3xl font-bold">Por que escolher TECHTEEN</h2>
       <p className="mt-2 text-slate-300 max-w-2xl">
         Equipamentos e acessórios pensados para entusiastas de tecnologia e profissionais que exigem performance.
       </p>

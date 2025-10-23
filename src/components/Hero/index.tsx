@@ -13,7 +13,7 @@ export default function Hero() {
           className="space-y-6"
         >
           <p className="inline-block px-3 py-1 rounded-full bg-white/8 text-sm text-[#bde0ff] font-medium">
-            Novo na LMG Tech
+            Novo na TECHTEEN Store!
           </p>
 
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
