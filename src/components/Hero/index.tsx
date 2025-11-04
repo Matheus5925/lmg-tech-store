@@ -75,11 +75,8 @@ export default function Hero() {
               className="w-16 h-16 object-cover rounded-lg"
             />
             <div className="flex-1">
-              <div className="text-sm font-semibold">LMG Headphones Pro</div>
-              <div className="text-xs text-slate-300">Som premium • Cancelamento de ruído</div>
-            </div>
-            <div>
-              <span className="text-lg font-bold">R$ 499</span>
+              <div className="text-sm font-semibold">TECHTEEN</div>
+              <div className="text-xs text-slate-300">Melhor qualidade • Atendimento personalizado</div>
             </div>
           </motion.div>
         </motion.div>

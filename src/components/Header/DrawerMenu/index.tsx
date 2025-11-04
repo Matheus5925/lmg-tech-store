@@ -20,7 +20,7 @@ export function CartDrawer({ drawerOpen, setDrawerOpen }) {
   const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
   const handleCheckout = () => {
     // Seu número de WhatsApp no formato internacional (ex: 55 para Brasil)
-    const phoneNumber = "5511983082634"; // <-- coloque o seu número aqui (sem + ou traços)
+    const phoneNumber = "5511966380028"; // <-- coloque o seu número aqui (sem + ou traços)
 
     // Monta a mensagem com os itens do carrinho
     const message = [

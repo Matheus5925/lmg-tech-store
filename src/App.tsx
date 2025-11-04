@@ -1,52 +1,62 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-// If you use shadcn/ui in your project, keep these. Otherwise replace Button with a native button.
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react"; // optional icon lib
-import {
-  Box,
-  IconButton,
-  Badge,
-  Button as ButtonMUI,
-} from "@mui/material";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
 import ProductShowcase from "./components/ShowCase";
 import Testimonials from "./components/Testimonials";
-import Pricing from "./components/Princing";
 import FAQ from "./components/FAQ";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { IconButton } from "@mui/material";
 // Note: ensure you have TailwindCSS + Framer Motion installed and configured.
 
 // ---- Sample data (replace with your real products, testimonials, images) ----
 const PRODUCTS = [
   {
     id: "p1",
-    name: "LMG Headphones Pro",
-    price: 499,
+    name: "Fone BT I11",
+    price: 39.95,
     excerpt: "Som imersivo, cancelamento de ruído ativo e design premium.",
-    img: "https://http2.mlstatic.com/D_NQ_NP_2X_784455-MLB90371023249_082025-F-fones-bluetooth-touch-anc-com-tela-de-lcd-e-equalizado-a9.webp",
+    images: [
+      "/assets/img/fone-kapbom-venda.png",
+      '/assets/img/fones-lotes.jpg'
+    ],
   },
   {
     id: "p2",
-    name: "LMG Wireless Charger",
-    price: 149,
-    excerpt: "Carregamento rápido e superfície antiderrapante.",
-    img: "https://http2.mlstatic.com/D_NQ_NP_769308-MLB85650949781_062025-O-power-bank-portatil-magsafe-10000mah-pequeno-induco-iphone.webp",
+    name: "Smart Watch GL09",
+    price: 99.90,
+    excerpt: "Monitoramento de saúde, GPS e bateria longa.",
+    images: [
+      "/assets/img/relogio-kapbom-venda.jpg",
+      '/assets/img/relógios-kapbom-lote.jpg'
+    ],
   },
+  // {
+  //   id: "p4",
+  //   name: "Smart Watch Ultra 9",
+  //   price: 99.90,
+  //   excerpt: "Monitoramento de saúde, GPS e bateria longa.",
+  //   images: [
+  //     "/assets/img/Smartwatch-ultra-venda.png",
+  //     '/assets/img/smartwatch-ultra-imagem.jpg'
+  //   ],
+  // },
   {
     id: "p3",
-    name: "LMG Smartwatch",
-    price: 799,
+    name: "Caixa de Som Kapbom",
+    price: 129.99,
     excerpt: "Monitoramento de saúde, GPS e bateria longa.",
-    img: "https://m.media-amazon.com/images/I/415LMgDAgBL._SY350_.jpg",
+    images: [
+      "/assets/img/caixa-de-som-venda.jpeg",
+      "/assets/img/caixas-de-som-lote.jpg"
+    ],
   },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Ana P.",
-    text: "Comprei os fones LMG e a qualidade do som é surreal. Entrega super rápida!",
+    text: "Comprei os fones TECHTEEN e a qualidade do som é surreal. Entrega super rápida!",
     photo: "https://randomuser.me/api/portraits/women/68.jpg",
     stars: 5,
   },
@@ -60,6 +70,14 @@ const TESTIMONIALS = [
 
 // ----------------------------- Component -----------------------------
 export default function LandingPage(): JSX.Element {
+
+  const openWhatsAppLink = () => {
+    const text = encodeURIComponent(
+      "Olá, quero saber mais informações da loja."
+    );
+    window.open(`https://wa.me/5511966380028?text=${text}`, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#07133a] to-[#03182a] text-slate-50 antialiased">
       <Header />
@@ -77,24 +95,40 @@ export default function LandingPage(): JSX.Element {
           </section>
 
           <section className="mt-16">
-            <Testimonials 
+            <Testimonials
               TESTIMONIALS={TESTIMONIALS}
             />
           </section>
 
-          <section className="mt-16">
+          {/* <section className="mt-16">
             <FAQ />
-          </section>
+          </section> */}
 
-          <section className="mt-16">
+          {/* <section className="mt-16">
             <LeadCapture />
-          </section>
+          </section> */}
         </div>
       </main>
 
       <Footer />
+      <IconButton
+        onClick={openWhatsAppLink}
+        sx={{
+          position: "fixed",
+          right: 18,
+          bottom: 18,
+          bgcolor: "#25D366",
+          color: "#fff",
+          p: 1.6,
+          boxShadow: "0 10px 30px rgba(37,211,102,0.2)",
+          '&:hover': { bgcolor: "#20c95a" },
+        }}
+      >
+        <WhatsAppIcon />
+      </IconButton>
     </div>
   );
+
 }
 
 // ----------------------------- Lead Capture -----------------------------
