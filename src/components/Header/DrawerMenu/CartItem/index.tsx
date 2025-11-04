@@ -17,7 +17,7 @@ export function CartItem({ item, updateQuantity, removeFromCart }) {
       {/* Imagem */}
       <Box
         component="img"
-        src={item.img}
+        src={item.images[0]}
         alt={item.name}
         sx={{ width: 100, height: 150, objectFit: "cover", borderRadius: 1 }}
       />
