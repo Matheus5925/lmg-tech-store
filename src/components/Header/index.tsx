@@ -18,9 +18,10 @@ export default function Header() {
           <img
             src="/assets/img/logo-tech-teen-removebg-preview.png"
             alt="TECHTEEN"
-            className="w-28 sm:w-36 h-auto object-contain max-w-full"
+            className="w-20 sm:w-27 h-auto object-contain max-w-full"
           />
         </a>
+
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
