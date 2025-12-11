@@ -14,7 +14,7 @@ const PRODUCTS = [
   {
     id: "p1",
     name: "Fone BT I11",
-    price: 39.95,
+    price: 39.90,
     excerpt: "Som imersivo, cancelamento de ruído ativo e design premium.",
     images: [
       "/assets/img/fone-kapbom-venda.png",
@@ -24,27 +24,17 @@ const PRODUCTS = [
   {
     id: "p2",
     name: "Smart Watch GL09",
-    price: 99.90,
+    price: 79.90,
     excerpt: "Monitoramento de saúde, GPS e bateria longa.",
     images: [
       "/assets/img/relogio-kapbom-venda.jpg",
       '/assets/img/relógios-kapbom-lote.jpg'
     ],
   },
-  // {
-  //   id: "p4",
-  //   name: "Smart Watch Ultra 9",
-  //   price: 99.90,
-  //   excerpt: "Monitoramento de saúde, GPS e bateria longa.",
-  //   images: [
-  //     "/assets/img/Smartwatch-ultra-venda.png",
-  //     '/assets/img/smartwatch-ultra-imagem.jpg'
-  //   ],
-  // },
   {
     id: "p3",
     name: "Caixa de Som Kapbom",
-    price: 129.99,
+    price: 59.90,
     excerpt: "Monitoramento de saúde, GPS e bateria longa.",
     images: [
       "/assets/img/caixa-de-som-venda.jpeg",

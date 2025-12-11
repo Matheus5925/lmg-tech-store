@@ -45,9 +45,9 @@ export default function ProductShowcase({ PRODUCTS }) {
       <div id="produtos">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl md:text-3xl font-bold">Produtos em destaque</h2>
-          <a href="#comprar" className="text-sm text-slate-300 hover:underline">
+          {/* <a href="#comprar" className="text-sm text-slate-300 hover:underline">
             Ver catálogo
-          </a>
+          </a> */}
         </div>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -83,7 +83,7 @@ export default function ProductShowcase({ PRODUCTS }) {
                 <p className="mt-2 text-sm text-slate-300">{p.excerpt}</p>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <div className="text-lg font-bold">R$ {p.price.toFixed(2)}</div>
+                  <div className="text-lg font-bold">R$ {p.price.toFixed(2).replace('.', ',')}</div>
                   <div className="flex gap-2">
                     <Button asChild onClick={() => handleBuyButton(p)}>
                       <p
