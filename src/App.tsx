@@ -27,7 +27,7 @@ const PRODUCTS = [
     price: 79.90,
     excerpt: "Monitoramento de saúde, GPS e bateria longa.",
     images: [
-      "/assets/img/relogio-kapbom-venda.jpg",
+      "/assets/img/relogio-kapbom-venda.png",
       '/assets/img/relógios-kapbom-lote.jpg'
     ],
   },
